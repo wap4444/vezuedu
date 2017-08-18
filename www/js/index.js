@@ -46,7 +46,7 @@ rr=2;
 
         //ПОДКЛЮЧЕНИЕ ПУШЕЙ
            window.plugins.OneSignal
-          .startInit("78520dbf-0cbd-41b3-aed3-1f27aba825e9")
+          .startInit("d20bcf14-0373-44b3-875d-51201d6012df")
           .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
           .handleNotificationOpened(didOpenRemoteNotificationCallBack)
               .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.None)
@@ -57,7 +57,7 @@ rr=2;
                     ipush = ids.userId;
             if(rr==1)
             {
-            var ref = cordova.InAppBrowser.open('http://aksu.controlsoft.kz/project_ksk/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+            var ref = cordova.InAppBrowser.open('http://ekibaztuz.controlsoft.kz/project_ksk/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
             }       
             });
         
