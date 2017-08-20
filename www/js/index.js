@@ -46,7 +46,7 @@ rr=2;
 
         //ПОДКЛЮЧЕНИЕ ПУШЕЙ
            window.plugins.OneSignal
-          .startInit("d20bcf14-0373-44b3-875d-51201d6012df")
+          .startInit("5edd010b-8e89-4860-8835-cfab570394a0")
           .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
           .handleNotificationOpened(didOpenRemoteNotificationCallBack)
               .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.None)
