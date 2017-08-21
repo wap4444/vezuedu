@@ -38,7 +38,7 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
         window.plugins.OneSignal.getIds(function(ids) {
                     ipush = ids.userId;
             alert(ipush);
-            var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v2/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');    
+            var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v2/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');    
             });
         
 
