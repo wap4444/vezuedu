@@ -19,26 +19,8 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        
-        rr=1;
-function didReceiveRemoteNotificationCallBack(jsonData) {   
-rr=2;
-var ref = cordova.InAppBrowser.open(jsonData.payload.additionalData.ssylka, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-}
-
-function didOpenRemoteNotificationCallBack(jsonData) {
-rr=2;
-//ref.close();
-// Для Andori
-//var newdata = JSON.parse ( jsonData.notification.payload.additionalData );
-//alert(newdata.ssylka);
-//var ref = cordova.InAppBrowser.open(newdata.ssylka , '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-//  Для Iphone
- var ref = cordova.InAppBrowser.open(jsonData.notification.payload.additionalData.ssylka, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-}
- 
-        
-        
+function didReceiveRemoteNotificationCallBack(jsonData) {}
+function didOpenRemoteNotificationCallBack(jsonData) {}       
         //Настройка ПУШЕЙ ДЛЯ АЙФОНА
         var iosSettings = {};
         iosSettings["kOSSettingsKeyAutoPrompt"] = true;
@@ -55,10 +37,8 @@ rr=2;
         
         window.plugins.OneSignal.getIds(function(ids) {
                     ipush = ids.userId;
-            if(rr==1)
-            {
-            var ref = cordova.InAppBrowser.open('http://mirada.kz/project_ksk/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-            }       
+            alert(ipush);
+            var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v2/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');    
             });
         
 
