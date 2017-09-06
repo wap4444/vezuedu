@@ -39,6 +39,7 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
            ipush = ids.userId;
             var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v2/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');    
             localStorage.ipush=ipush;
+            $('.loader1').fadeIn();
         });
         
 
