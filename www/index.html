@@ -35,18 +35,6 @@
 	        <script type="text/javascript" src="jquery-latest.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-if(!localStorage.ipush){
-$('.loader1').css('height',screen.width+'px');
-$('.loader1').fadeIn();
-}
-		
-		function func() {
-var arr = ["Катаем тесто для пиццы...", "Варим рис для суши...", "Жарим вкусный шашлык...", "Подготовка к первому запуску...", "Ловим свежую рыбу для роллов..."];
-var rand = Math.floor(Math.random() * arr.length);
-  $('#loaderInfo').text(arr[rand]);
-}
-setInterval(func, 3000);
-		
             app.initialize();
         </script>
     </body>
