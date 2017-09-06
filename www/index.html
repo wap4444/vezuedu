@@ -8,13 +8,19 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
 	 <link href="css/main.css" rel="stylesheet">
     </head>
+
 <body id="top" style="text-align:center;">
-<div class="loader1" style="text-align:center; display:none;     background-color: rgba(0, 0, 0, 0.5);
+
+
+<div class="loader1" style="text-align:center; display:none; background-color: rgba(0, 0, 0, 0.5);
     height: 100%;    padding-top: 100px;
     width: 100%;">
+<p id="loaderInfo">Подготовка к первому запуску...</p>
 <img src="preloader.gif">
+<p>Благодарим за терпение!</p>
 </div>
 
+	
 	<div class="site-wrapper-inner">
 <div class="cover-container">
 <div class="masthead clearfix">
@@ -29,6 +35,17 @@
 	        <script type="text/javascript" src="jquery-latest.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
+if(!localStorage.ipush){
+$('.loader1').fadeIn();
+}
+		
+		function func() {
+var arr = ["Катаем тесто для пиццы...", "Варим рис для суши...", "Жарим вкусный шашлык...", "Подготовка к первому запуску...", "Ловим свежую рыбу для роллов..."];
+var rand = Math.floor(Math.random() * arr.length);
+  $('#loaderInfo').text(arr[rand]);
+}
+setInterval(func, 3000);
+		
             app.initialize();
         </script>
     </body>
