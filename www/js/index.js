@@ -19,6 +19,20 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        
+        if(!localStorage.ipush){
+$('.loader1').css('height',screen.width+'px');
+$('.loader1').fadeIn();
+}
+		
+		function func() {
+var arr = ["Катаем тесто для пиццы...", "Варим рис для суши...", "Жарим вкусный шашлык...", "Подготовка к первому запуску...", "Ловим свежую рыбу для роллов..."];
+var rand = Math.floor(Math.random() * arr.length);
+  $('#loaderInfo').text(arr[rand]);
+}
+setInterval(func, 3000);
+		
+        
 function didReceiveRemoteNotificationCallBack(jsonData) {}
 function didOpenRemoteNotificationCallBack(jsonData) {}       
         //Настройка ПУШЕЙ ДЛЯ АЙФОНА
