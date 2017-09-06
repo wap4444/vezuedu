@@ -26,7 +26,7 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
         iosSettings["kOSSettingsKeyAutoPrompt"] = true;
         iosSettings["kOSSettingsKeyInAppLaunchURL"] = true;
 
-        //ПОДКЛЮЧЕНИЕ ПУШЕЙ
+        //ПОДКЛЮЧЕНИЕ ПУШЕЙ 
            window.plugins.OneSignal
           .startInit("2d020748-2943-4d32-a804-1506007a1eea")
           .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
