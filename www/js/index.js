@@ -20,7 +20,8 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         
-if(!localStorage.ipush){
+if(localStorage.ipush){}
+else{
 $('.loader1').css('height',screen.width+'px');
 $('.loader1').fadeIn();
 }
