@@ -60,6 +60,7 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
         window.plugins.OneSignal.getIds(function(ids) {
            ipush = ids.userId;
 $('.loader1').hide();
+$('.loader2').show();
 localStorage.ipush=ipush;
             var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');    
 
