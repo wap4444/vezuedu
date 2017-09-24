@@ -20,7 +20,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         
-        if(!localStorage.ipush){
+if(!localStorage.ipush){
 $('.loader1').css('height',screen.width+'px');
 $('.loader1').fadeIn();
 }
@@ -28,13 +28,17 @@ $('.loader1').fadeIn();
 
 	    
 var i = 0;
-while (i < 8) {
+(function() {
+    if (i < 8) {
 var arr = ["Загрузка списка доступных городов...", "Загрузка списка заведений...", "Загрузка категорий еды...", "Загрузка меню...", "Подготовка изображений...", "Загрузка акций...", "Загрузка иконок...", "Настройка данных..."];
-  $('#loaderInfo').text(arr[i]);
-  i++;
-setTimeout(5000);
-}
-		
+	    $('#loaderInfo').text(arr[i]);
+        i++;
+        setTimeout(arguments.callee, 1000);
+    } else {
+ $('#loaderInfo').text("Настройка данных...");
+    } 
+})();   
+
         
 function didReceiveRemoteNotificationCallBack(jsonData) {}
 function didOpenRemoteNotificationCallBack(jsonData) {}       
