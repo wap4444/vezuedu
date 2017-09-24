@@ -38,8 +38,12 @@ var arr = ["Загрузка списка доступных городов...",
     } else {
  $('#loaderInfo').text("Настройка данных...");
     } 
-})();   
+})(); 
+	    
 
+$("#BtnEnt" ).click(function() {
+var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+});
         
 function didReceiveRemoteNotificationCallBack(jsonData) {}
 function didOpenRemoteNotificationCallBack(jsonData) {}       
