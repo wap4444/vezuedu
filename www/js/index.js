@@ -19,6 +19,18 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+	    
+	    
+	    document.addEventListener("offline", onOffline, false);
+ 
+function onOffline() {
+alert('Отсутствует подклюение к Интернет!');
+}
+document.addEventListener("online", onOnline, false);
+ 
+function onOnline() {
+}
+	    
         
 if(localStorage.ipush){}
 else{
