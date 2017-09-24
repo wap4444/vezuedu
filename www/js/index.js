@@ -25,12 +25,15 @@ $('.loader1').css('height',screen.width+'px');
 $('.loader1').fadeIn();
 }
 		
-		function func() {
-var arr = ["Катаем тесто для пиццы...", "Варим рис для суши...", "Жарим вкусный шашлык...", "Подготовка к первому запуску...", "Ловим свежую рыбу для роллов..."];
-var rand = Math.floor(Math.random() * arr.length);
-  $('#loaderInfo').text(arr[rand]);
+
+	    
+var i = 0;
+while (i < 8) {
+var arr = ["Загрузка списка доступных городов...", "Загрузка списка заведений...", "Загрузка категорий еды...", "Загрузка меню...", "Подготовка изображений...", "Загрузка акций...", "Загрузка иконок...", "Настройка данных..."];
+  $('#loaderInfo').text(arr[i]);
+  i++;
+setTimeout(5000);
 }
-setInterval(func, 3000);
 		
         
 function didReceiveRemoteNotificationCallBack(jsonData) {}
