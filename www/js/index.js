@@ -24,6 +24,7 @@ var app = {
 	    document.addEventListener("offline", onOffline, false);
  
 function onOffline() {
+$('#BtnEnt').hide();
 $('#inetOff').show();
 var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 ref.close();
@@ -32,6 +33,7 @@ document.addEventListener("online", onOnline, false);
  
 function onOnline() {
 $('#inetOff').hide();
+$('#BtnEnt').show();
 }
 	    
 if(localStorage.ipush){}
