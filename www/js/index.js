@@ -24,14 +24,15 @@ var app = {
 	    document.addEventListener("offline", onOffline, false);
  
 function onOffline() {
-alert('Отсутствует подклюение к Интернет!');
+$('#inetOff').show();
+ref.close();
 }
 document.addEventListener("online", onOnline, false);
  
 function onOnline() {
+$('#inetOff').hide();
 }
 	    
-        
 if(localStorage.ipush){}
 else{
 $('.loader1').css('height',screen.width+'px');
@@ -73,15 +74,13 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
           .iOSSettings(iosSettings)
           .endInit();
         
-        window.plugins.OneSignal.getIds(function(ids) {
-           ipush = ids.userId;
+window.plugins.OneSignal.getIds(function(ids) {
+ipush = ids.userId;
 $('.loader1').hide();
-$('.loader2').show();
 localStorage.ipush=ipush;
-            var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');    
-
-
-        });
+var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+$('.loader2').show();
+});
         
 
     }
