@@ -65,9 +65,7 @@ var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+local
 function didReceiveRemoteNotificationCallBack(jsonData) {
  alert("Notification opened:\n" + JSON.stringify(jsonData));
 }
-function didOpenRemoteNotificationCallBack(jsonData) {
- alert("Notification opened:\n" + JSON.stringify(jsonData));
-}       
+   
         //Настройка ПУШЕЙ ДЛЯ АЙФОНА
         var iosSettings = {};
         iosSettings["kOSSettingsKeyAutoPrompt"] = true;
@@ -77,7 +75,9 @@ function didOpenRemoteNotificationCallBack(jsonData) {
            window.plugins.OneSignal
           .startInit("2d020748-2943-4d32-a804-1506007a1eea")
           .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
-          .handleNotificationOpened(didOpenRemoteNotificationCallBack)
+.handleNotificationOpened(function(jsonData) {
+    alert("Notification opened:\n" + JSON.stringify(jsonData));
+  })
           .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.None)
           .iOSSettings(iosSettings)
           .endInit();
