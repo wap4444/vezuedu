@@ -62,7 +62,9 @@ $("#BtnEnt" ).click(function() {
 var ref = cordova.InAppBrowser.open('http://vezuedu.kz/v3/index.php?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 });
         
-function didReceiveRemoteNotificationCallBack(jsonData) {}
+function didReceiveRemoteNotificationCallBack(jsonData) {
+ alert("Notification opened:\n" + JSON.stringify(jsonData));
+}
 function didOpenRemoteNotificationCallBack(jsonData) {
  alert("Notification opened:\n" + JSON.stringify(jsonData));
 }       
