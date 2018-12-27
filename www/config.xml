@@ -44,7 +44,7 @@ MaksimMorozov
 <plugin name="cordova-plugin-network-information" spec="1.2.1" />
 <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
 <plugin name="onesignal-cordova-plugin"  source="npm" />
-  
+  <plugin name="cordova-plugin-splashscreen" source="npm" spec="latest" />
 
 <!-- Recommend the newest cli but requires cli-5.1.1+ and gradle for Android. -->
 <!-- If the below settings are not compatible with your project set the "PGB ANT" version above. -->
@@ -53,7 +53,6 @@ MaksimMorozov
 
 
     <!-- Define app icon and splashscreen for each platform. -->
-    <icon src="icon.png" />
     <platform name="android">
           
      	<icon src="www/res/android/drawable-mdpi/ic_launcher.png" density="mdpi" />
